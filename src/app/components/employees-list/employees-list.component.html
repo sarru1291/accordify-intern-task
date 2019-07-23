@@ -1,0 +1,26 @@
+<h2>Employees List</h2>
+<form class="search-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search Employee" />
+  </mat-form-field>
+</form>
+
+<mat-list
+  ><app-employee
+    *ngFor="let employee of employeesList"
+    [employee]="employee"
+    (deleteEmployeeData)="deleteEmployeeData($event)"
+    (editEmployeeData)="editEmployeeData($event)"
+  ></app-employee
+></mat-list>
+
+<!-- Form to edit -->
+<div *ngIf="toEdit == true" class="edit-form">
+  <p>
+    Deleted:
+    <input type="text" #deletedValue />
+  </p>
+  <button (click)="cancelEdit()">Close</button>&nbsp;
+
+  <button (click)="updateData(deletedValue)">Update</button>
+</div>

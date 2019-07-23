@@ -1,0 +1,23 @@
+.search-form,
+.edit-form {
+  margin-left: 40%;
+}
+.hideForm {
+  visibility: none;
+}
+.showForm {
+  visibility: visible;
+}
+.edit-form {
+  top: 20%;
+  left: 0%;
+  padding: 40px;
+  background: wheat;
+  position: absolute;
+
+  button {
+    background: black;
+    color: white;
+    border: none;
+  }
+}

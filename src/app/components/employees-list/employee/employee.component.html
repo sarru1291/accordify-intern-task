@@ -1,0 +1,12 @@
+<mat-list-item
+  >Id: {{ employee.id }} &nbsp; CandidateId:
+  {{ employee.candidateId }} &nbsp;LaptopId: {{ employee.laptopId }} &nbsp; Data
+  Created: {{ employee.dataCreated }} &nbsp; Deleted: {{ employee.deleted }}
+  <mat-icon (click)="onEditEmployee(employee)" class="mat-icon-edit"
+    >edit</mat-icon
+  >
+  <mat-icon class="mat-icon-delete" (click)="onDeleteEmployee(employee)"
+    >delete</mat-icon
+  >
+</mat-list-item>
+<mat-divider></mat-divider>

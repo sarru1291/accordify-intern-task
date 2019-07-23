@@ -5,18 +5,20 @@ ul {
   overflow: hidden;
   background-color: grey;
 }
-
 li {
+  float: left;
+}
+li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  float: left;
 }
-li:hover{
- color: black;
+li a:hover {
+  background-color: #111;
 }
-li:active{
- color: white;
+li a.active {
+  color: white;
+  background-color: black;
 }

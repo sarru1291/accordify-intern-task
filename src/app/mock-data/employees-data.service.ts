@@ -48,5 +48,10 @@ export class EmployeesDataService {
   getEmployeesData(): Observable<Employee[]> {
     return of(this.employeesList);
   }
-  
+  updateData(newValue, id): void {
+    let x = this.employeesList.find(function(employee) {
+      return employee.id == id;
+    });
+    x.deleted = newValue;
+  }
 }

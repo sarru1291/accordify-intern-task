@@ -32,8 +32,8 @@ export class EmployeesListComponent implements OnInit {
   cancelEdit(): void {
     this.toEdit = false;
   }
-  updateData(e): void {
+  updateData(e, id): void {
     this.toEdit = false;
-    // this.employeesDataService.updateData();
+    this.employeesDataService.updateData(e.value, id);
   }
 }

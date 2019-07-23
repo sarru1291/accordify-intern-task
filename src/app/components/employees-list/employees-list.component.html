@@ -18,9 +18,15 @@
 <div *ngIf="toEdit == true" class="edit-form">
   <p>
     Deleted:
-    <input type="text" #deletedValue />
+    <input
+      type="text"
+      #deletedValue
+      value="{{ selectedEmployeeToEdit.deleted }}"
+    />
   </p>
   <button (click)="cancelEdit()">Close</button>&nbsp;
 
-  <button (click)="updateData(deletedValue)">Update</button>
+  <button (click)="updateData(deletedValue, selectedEmployeeToEdit.id)">
+    Update
+  </button>
 </div>

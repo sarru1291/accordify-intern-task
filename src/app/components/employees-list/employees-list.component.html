@@ -1,10 +1,11 @@
-<h2>Employees List</h2>
-<form class="search-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Search Employee" />
-  </mat-form-field>
-</form>
-
+<div class="title">
+  <h2>Employees List</h2>
+  <form class="search-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter CandiateId" (keyup)="search($event)" />
+    </mat-form-field>
+  </form>
+</div>
 <mat-list
   ><app-employee
     *ngFor="let employee of employeesList"

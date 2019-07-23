@@ -11,6 +11,7 @@ export class EmployeesListComponent implements OnInit {
   employeesList: Employee[];
   selectedEmployeeToEdit: Employee;
   toEdit: boolean;
+  query: string = "";
   constructor(private employeesDataService: EmployeesDataService) {}
 
   ngOnInit() {
@@ -35,5 +36,9 @@ export class EmployeesListComponent implements OnInit {
   updateData(e, id): void {
     this.toEdit = false;
     this.employeesDataService.updateData(e.value, id);
+  }
+  search(e: any) {
+    this.query += e.key;
+    console.log(this.query);
   }
 }
